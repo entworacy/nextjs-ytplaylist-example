@@ -13,11 +13,11 @@ const YtHtmlView: NextPage<
                         <span>
                             {message}
                         </span>
-                        <p>404: playlistId가 올바르지 않음<br/>403: apikey가 잘못됨</p>
+                        <p>404: wrong listId<br/>403: Wrong api key</p>
                     </>) : null}
             </div>
 
-            {/* 리스트: 실패시에도 띄우게 하면 undefined 오류 발생함 */}
+            {/* Undefined error occurs if you let it float even in case of failure */}
             {isSuccess ?
             <ul className={styles.grid} style={{maxHeight: "400px"}}>
                 {data.items.map(({ id, snippet }: {
